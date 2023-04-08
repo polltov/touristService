@@ -1,0 +1,162 @@
+/* Default */
+.container-for-main-content {
+  background-color: white;
+  box-shadow: 0 15px 15px 5px rgba(0, 0, 0, .3);
+  
+  padding-bottom: 3%;
+}
+/* Default */
+
+/* Single title */
+.single-title {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-bottom: 3%;
+
+  border-bottom: 1px solid #0089e2;
+}
+
+.single-title-mobile {
+  display: block;
+}
+
+.title-of-rergion {
+  font-size: 3em;
+}
+
+.profile-mobile {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-bottom: 3%;
+}
+
+.title-of-rergion-mobile {
+  padding-left: 5%;
+  transform: translateY(-20px);
+}
+
+.text-of-region {
+  padding-left: 3%;
+  width: 70%;
+}
+
+.region-image {
+  width: 150px;
+  height: 150px;
+  box-shadow: 12px 12px 2px 1px rgba(104, 180, 255, 0.3);
+}
+/*  Single title  */
+
+/* Definition */
+.definition {
+  padding: 0 3% 3% 3%;
+  border-bottom: 1px solid #0089e2;
+}
+
+/* Definition */
+
+/* Range of prices */
+.range_of_prices {
+  border-bottom: 1px solid #0089e2;
+  margin-bottom: 3%;
+  padding: 0 3% 3% 3%;
+}
+/* Range_of_prices */
+
+/* Table */
+.col {
+  color: white!important;
+}
+
+thead {
+ background-color: #0089e2; 
+}
+
+.tbody-none {
+  display: none;
+}
+
+.my-table {
+  padding: 0% 30px;
+}
+
+.about-region {
+  padding: 4% 0;
+}
+/* Table */
+
+/* Comments */
+::-webkit-scrollbar { 
+  height: 8px; 
+} 
+::-webkit-scrollbar-track { 
+  background: #f1f1f1; 
+  border-radius: 25px; 
+} 
+
+.comments { 
+  display: flex; 
+  gap: 12px;  
+  width: 95%; 
+  margin: 10px auto; 
+  border-radius: 12px; 
+  padding: 30px; 
+  padding-top: 5%;
+  padding-bottom: 5%;
+  scroll-snap-type: x mandatory; 
+  overflow-x: scroll; 
+  scroll-padding: 30px; 
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1); 
+} 
+
+.container .card { 
+  display: flex; 
+  flex: 0 0 100%; 
+  flex-direction: column; 
+  align-items: center; 
+  padding: 30px; 
+  max-width: 400px;
+  border-radius: 12px; 
+  background: #fff; 
+  scroll-snap-align: start; 
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1); 
+} 
+
+.card h2 { 
+  margin-top: 25px; 
+  color: #333; 
+  font-size: 22px; 
+  font-weight: 600; 
+} 
+.card p { 
+  margin-top: 4px; 
+  font-size: 18px; 
+  font-weight: 400; 
+  color: #333; 
+  text-align: center; 
+}
+
+.stars {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.rating {
+  display: none;
+}
+
+.star {
+  height: 32px;
+  width: 32px;
+}
+
+.star-fill {
+  fill: white;
+}
+
+/* Comments */

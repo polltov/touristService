@@ -1,0 +1,185 @@
+{% extends 'webApp/layout.html' %}
+{% load static %}
+
+{% block title %} Туристические города {% endblock %}
+
+{% block styles %}
+<link href="{% static './webApp/css/index.css' %}" rel="stylesheet">
+<style>
+    .carousel-item {
+        min-height: 600px;
+    }
+
+    .carousel_image_1 {
+        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%), url("{% static './webApp/img/poster2.jpg' %}") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel_image_2 {
+        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%), url("{% static './webApp/img/poster3.jpg' %}") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel_image_3 {
+        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%), url("{% static './webApp/img/poster4.jpg' %}") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Begin of Carousel -->
+<div class="container-fluid my-carousel">
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"
+         data-bs-interval="5000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel_image_1 d-flex w-100">
+                    <div class="text-in-carousel">
+                        <h1 class="big-text-in-carousel">
+                            Text
+                        </h1>
+                        <p class="small-text-in-carousel">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, magnam. Laborum hic
+                            officiis ipsa, ducimus ea labore aliquam optio necessitatibus neque esse? Aliquam natus
+                            incidunt non neque ut, fugit blanditiis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel_image_2 d-flex w-100">
+                    <div class="text-in-carousel">
+                        <h1 class="big-text-in-carousel">
+                            Text
+                        </h1>
+                        <p class="small-text-in-carousel">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, magnam. Laborum hic
+                            officiis ipsa, ducimus ea labore aliquam optio necessitatibus neque esse? Aliquam natus
+                            incidunt non neque ut, fugit blanditiis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel_image_3 d-flex w-100">
+                    <div class="text-in-carousel">
+                        <h1 class="big-text-in-carousel">
+                            Text
+                        </h1>
+                        <p class="small-text-in-carousel">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, magnam. Laborum hic
+                            officiis ipsa, ducimus ea labore aliquam optio necessitatibus neque esse? Aliquam natus
+                            incidunt non neque ut, fugit blanditiis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<!-- End of Carousel -->
+
+<!-- Begin of Section with cards -->
+<section class="main-content">
+    <div class="container">
+        <form method="get" class="d-flex search-form">
+            <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+        <div class="info_tags">
+            <h2>Теги</h2>
+            <div class="tags">
+                {% for tag in tags.all %}
+                    <span class="tag" data-id="{{ tag.id }}"> {{ tag.title }} </span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <h2 class="text-in-main-content">{{ state_of_header }}</h2>
+        <div class="row">
+            {% for region in regions.values %}
+            <div class="col-lg-4 col-sm-6 mb-3">
+                <div class="product-card">
+                    <div class="product-thumb">
+                        <div class="square-for-rating">
+                            <svg width="48px" height="48px" viewBox="0 0 24 24" id="meteor-icon-kit__solid-square"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M3 0H21C22.6569 0 24 1.34315 24 3V21C24 22.6569 22.6569 24 21 24H3C1.34315 24 0 22.6569 0 21L0 3C0 1.34315 1.34315 0 3 0Z"
+                                          fill="#0089e2"/>
+                                </g>
+                            </svg>
+                            <h3 class="text-rating">{{ region.rating }}</h3>
+                        </div>
+                        <div class="region-image">
+                            <img src="{{ region.image.url }}" class="region-true-image" alt="">
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="d-flex justify-content-center">
+                            <h4 class="region-title">{{ region.title }}</h4>
+                        </div>
+                        <p>{{ region.short_definition }}</p>
+                        <h6 class="price">Цена за проживание<br> от {{ region.min_apartment_price }} руб. до
+                            {{ region.max_apartment_price }} руб.</h6>
+                        <div class="product-bottom-details d-flex justify-content-center">
+                            <div class="region-links">
+                                <a href="regions/{{ region.rating }}"><h6>Подробнее</h6></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- End of Section with cards -->
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static './webApp/js/q_form.js' %}"></script>
+<script src="{% static './webApp/js/click_on_tag.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,164 @@
+/* Carousel */
+.text-in-carousel {
+	color: #f6fafb;
+	text-align: center;
+	max-width: 60%;
+}
+
+.big-text-in-carousel {
+	text-align: center;
+}
+
+.small-text-in-carousel {
+	text-align: center;
+}
+
+.my-carousel {
+    padding: 0;
+}
+
+.my-carousel .carousel-item {
+	display: flex;
+	max-height: 600px;
+}
+
+.my-carousel .carousel-item img {
+	object-fit: cover;
+}
+/* Carousel */
+
+/* SearchForm */
+.search-form {
+    padding-top: 3%;
+}
+
+.btn {
+  background-color: white;
+}
+
+.info_tags {
+	margin-top: 3%;
+	margin-bottom: 1%;
+	border-bottom: 1px solid #0089e2;
+}
+/*  */
+
+/* Main Content */
+.text-in-main-content {
+    text-align: center;
+	padding-bottom: 8%;
+	padding-top: 8%;
+}
+
+/* Main Content */
+
+/* Product card */
+.main-content {
+	background-color: #f6fafb;
+	padding-bottom: 8%;
+}
+
+.product-card {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+	transition: all .3s;
+}
+
+.product-card:hover {
+	box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
+}
+
+.product-thumb a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	row-gap: 10px;
+	height: 200px;
+}
+
+.product-thumb img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.product-details {
+	padding: 20px;
+}
+
+.product-details h4 a {
+	font-weight: 500;
+	display: block;
+	height: 60px;
+	overflow: hidden;
+	text-decoration: none;
+}
+
+.product-details p {
+	font-size: 15px;
+	margin-bottom: 20px;
+	color: #999;
+	height: 44px;
+	overflow: hidden;
+}
+
+.product-bottom-details {
+	overflow: hidden;
+	border-top: 1px solid #eee;
+	padding-top: 20px;
+}
+
+.product-price {
+	font-size: 18px;
+	color: #ee6e73;
+	font-weight: 600;
+}
+
+.product-price small {
+	color: #ccc;
+	font-weight: 400;
+	text-decoration: line-through;
+	margin-right: 5px;
+}
+
+.product-bottom-details {
+  text-align: center;
+}
+
+.region-title {
+	color: #0d6efd;
+}
+
+.region-image {
+	width: 85%;
+	height: 200px;
+	margin: 0 auto;
+}
+
+.region-true-image {
+  width: 100%;
+  height: 100%;
+}
+
+.product-links h6 {
+	font-size: 20px;
+}
+
+.square-for-rating {
+  width: 48px;
+	transform: translateX(-6px) translateY(-6px);
+}
+
+.text-rating {
+	color: #f6fafb;
+	position: absolute;
+    top: 6px;
+    left: 17px;
+}
+
+.price {
+    color: #999;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 5px;
+}
+/* Product card */
